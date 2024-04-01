@@ -38,8 +38,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/belan_shape"
-        app:queryHint="Search product" /> <!-- Customize hint text here -->
+        app:queryHint="Search product" />
 
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/spinnerItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        app:layout_constraintTop_toBottomOf="@+id/spinnerItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/switchCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumb="@drawable/switch_thumb"
+        android:track="@drawable/switch_track"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
