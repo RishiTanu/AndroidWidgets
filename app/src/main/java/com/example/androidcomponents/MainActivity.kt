@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.ContextCompat
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         val switchCompat: SwitchCompat = findViewById(R.id.switchCompat)
         switchCompat.thumbDrawable = ContextCompat.getDrawable(this, R.drawable.switch_thumb)
@@ -69,6 +72,20 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    fun setBottomNavigationBarVisibility(visibility: Boolean) {
+        /*val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNav.visibility = if (visibility) View.VISIBLE else View.GONE*/
+    }
+   // LogoutConfirmationDialogFragment().show(supportFragmentManager, "logoutDialog")
 
-
+    private fun openMapFragmentDrawer() {
+        /*val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as? NavHostFragment
+        val currentFragment = navHostFragment?.childFragmentManager?.fragments?.firstOrNull()
+        if (currentFragment is FragmentC) {
+            currentFragment.openDrawer()
+        } else {
+            // Optionally navigate to the MapFragment if not already there
+            // findNavController(R.id.nav_host_fragment).navigate(R.id.action_global_mapFragment)
+        }*/
+    }
 }
