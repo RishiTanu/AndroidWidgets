@@ -47,4 +47,6 @@ dependencies {
 
     // ViewPager2
     implementation ("androidx.viewpager2:viewpager2:1.0.0")
+    implementation ("com.hbb20:ccp:2.5.3")
+    implementation ("com.googlecode.libphonenumber:libphonenumber:8.12.48")
 }

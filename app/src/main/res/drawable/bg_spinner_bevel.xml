@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background Color -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <!-- Simulate Bevel Effect with Gradient -->
+    <item android:right="2dp" android:top="2dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#DDDDDD"
+            android:endColor="#BBBBBB"
+            android:angle="315" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+</layer-list>
