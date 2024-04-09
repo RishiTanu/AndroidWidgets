@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/top_sheet_background"
+    android:padding="16dp">
+
+    <!-- Header for the Top Sheet -->
+    <TextView
+        android:id="@+id/topSheetHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top Sheet Header"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:gravity="center_horizontal"
+        android:padding="8dp"/>
+
+    <!-- Content Body of the Top Sheet -->
+    <TextView
+        android:id="@+id/topSheetBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is the content of the top sheet. You can place any information here."
+        android:gravity="center_horizontal"
+        android:padding="8dp"/>
+
+    <!-- You can add more UI elements here as needed -->
+</LinearLayout>

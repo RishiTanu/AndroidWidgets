@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SpinnerActivity">
+
+   <!-- <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/mySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        app:spinner_popupAnimation="DropDown"
+        app:spinner_dividerColor="@color/black"
+        app:spinner_dividerSize="1dp"
+        app:spinner_showArrow="true"
+        app:spinner_arrowTint="@color/black"
+        app:spinner_arrowPadding="8dp"
+        app:spinner_arrowGravity="end"
+        app:spinner_textColor="@color/black"
+        app:spinner_backgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        app:queryHint="Search here..."
+        app:searchIcon="@drawable/ic_search_white" />
+
+
+    <Spinner
+        android:id="@+id/customSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:spinnerMode="dropdown"
+        android:dropDownVerticalOffset="40dp"
+        android:dropDownWidth="match_parent"
+    android:layout_margin="16dp"
+    android:padding="8dp" />
+
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Sign up."
+        android:textColor="#FF0000" /> <!-- Change color here -->
+
+
+</LinearLayout>
