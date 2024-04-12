@@ -40,3 +40,72 @@ fun NavController.navigateSingleTopTo(@IdRes resId: Int, args: Bundle? = null) {
 }*/
 
 
+
+/*class MapFragment : Fragment() {
+    private lateinit var binding: FragmentMapBinding
+    private var isAlreadyInitialized = false
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentMapBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        if (!isAlreadyInitialized) {
+            initializeMapView()
+            isAlreadyInitialized = true
+        }
+    }
+
+    private fun initializeMapView() {
+        // All the initialization code that you don't want to execute again
+    }
+}*/
+
+
+
+
+/*class DashboardActivity : AppCompatActivity() {
+    lateinit var binding: ActivityDashboardBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityDashboardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
+
+    fun showBottomBar(show: Boolean) {
+        binding.bottomBar.visibility = if (show) View.VISIBLE else View.GONE
+    }
+}*/
+
+/*open class BaseFragment : Fragment() {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        (activity as? DashboardActivity)?.let {
+            it.showBottomBar(shouldShowBottomBar())
+        }
+    }
+
+    open fun shouldShowBottomBar(): Boolean {
+        return true  // Default is to show, override in fragments where you don't want to show it
+    }
+}*/
+
+/*class SplashFragment : BaseFragment() {
+
+    override fun shouldShowBottomBar(): Boolean {
+        return false
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Your other setup code
+    }
+}*/

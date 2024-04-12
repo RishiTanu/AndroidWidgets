@@ -46,4 +46,12 @@
     <string name="start_a_new_account">New account</string>
     <string name="country">country</string>
     <string name="search">search\n</string>
+
+
+    <string-array name="leg_types">
+        <item>Cruse</item>
+        <item>Descending</item>
+        <item>Climbing</item>
+    </string-array>
+
 </resources>
