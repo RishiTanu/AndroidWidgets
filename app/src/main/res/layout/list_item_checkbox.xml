@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is the layout for a single item in the list of checkboxes -->
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/checkbox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp" />

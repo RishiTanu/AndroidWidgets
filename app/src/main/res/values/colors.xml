@@ -4,5 +4,20 @@
     <color name="grey_background">#D3D3D3</color>
     <color name="tab_text_color_selector">#7E2323</color>
     <color name="selected_tab_text_color">#000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="selected_item_background">#00FF00</color> <!-- green -->
+    <color name="dropdown_item_background">#0000FF</color> <!-- blue -->
+    <color name="dropdown_item_text">#FFFFFF</color> <!-- white -->
+
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="selected_background">#0000FF</color> <!-- This is blue -->
+    <color name="unselected_background">#FFFFFF</color> <!-- This is white -->
+    <color name="selected_text">#FFFFFF</color> <!-- This is white -->
+    <color name="unselected_text">#000000</color> <!-- This is black -->
+
 </resources>

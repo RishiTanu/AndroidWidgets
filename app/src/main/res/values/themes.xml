@@ -19,4 +19,17 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <style name="SpinnerItem" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/blue</item>
+    </style>
+
+    <style name="SpinnerDropDownItem" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/blue</item>
+    </style>
+
+    <color name="blue">#0000FF</color>
+    <color name="green">#00FF00</color>
+
 </resources>

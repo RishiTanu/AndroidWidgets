@@ -57,4 +57,5 @@ dependencies {
     implementation ("com.hbb20:ccp:2.5.3")
     implementation ("com.googlecode.libphonenumber:libphonenumber:8.12.48")
     implementation ("com.github.skydoves:powerspinner:1.2.7")
+    implementation ("com.github.AnuraganuPunalur:Multi-Selection-Spinner-Android:1.0")
 }
