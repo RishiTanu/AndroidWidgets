@@ -43,12 +43,12 @@ class TabActivity : AppCompatActivity() {
         }
 
 
-        val spinners: Spinner = findViewById(R.id.spinner)
-        val items = listOf("Item 1", "Item 2", "Item 3")
-        val adapter = CustomSpinnerAdapter(this, R.layout.spinner_item_layout, items)
+        //v/*al spinners: Spinner = findViewById(R.id.spinner)
+      //  val items = listOf("Item 1", "Item 2", "Item 3")
+       // val adapter = CustomSpinnerAdapter(this, R.layout.spinner_item_layout, items)
 
-        spinners.adapter = adapter
-        spinners.setPopupBackgroundResource(R.drawable.bg_spinner_bevel)
+       // spinners.adapter = adapter
+      //  spinners.setPopupBackgroundResource(R.drawable.bg_spinner_bevel)*/
     }
 
     private fun validatePhoneNumber(phoneNumber: String, countryIsoCode: String) {

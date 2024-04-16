@@ -6,32 +6,53 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.RadioButton
+import android.widget.Spinner
+import android.widget.TextView
+
 
 class CustomSpinnerAdapter(
     context: Context,
-    private val resource: Int,
     items: List<String>
-) : ArrayAdapter<String>(context, resource, items) {
+) : ArrayAdapter<String>(context, 0, items) {
 
-    // Tracks the selected position within the spinner
     private var selectedPosition = -1
 
     override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val inflater = LayoutInflater.from(context)
-        val view = convertView ?: inflater.inflate(resource, parent, false)
+        val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.spinner_radio_item, parent, false)
         val radioButton = view.findViewById<RadioButton>(R.id.radio_button)
-        radioButton.text = getItem(position)
+        val textView = view.findViewById<TextView>(R.id.text_view_spinner_item)
+
+        textView.text = getItem(position)
         radioButton.isChecked = position == selectedPosition
+
+        view.setOnClickListener {
+            selectedPosition = position
+            notifyDataSetChanged()
+            (parent as Spinner).setSelection(position)
+            // Optionally close the dropdown if you want to
+            // parent.performClick()
+        }
 
         return view
     }
 
-    // Call this method when a dropdown item is selected
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        // Here, provide the layout for the selected item which is displayed by the spinner
+        val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.spinner_radio_item, parent, false)
+        val textView = view.findViewById<TextView>(R.id.text_view_spinner_item)
+
+        // Set the text for the TextView when the Spinner is not expanded
+        textView.text = getItem(position)
+        return view
+    }
+
     fun onItemSelected(position: Int) {
-        if (position != selectedPosition) {
-            selectedPosition = position
-            notifyDataSetChanged() // Notify that the data has changed to update the UI
-        }
+        selectedPosition = position
+        notifyDataSetChanged()
+    }
+
+    override fun isEnabled(position: Int): Boolean {
+        return true
     }
 
     fun getSelectedPosition(): Int {

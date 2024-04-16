@@ -13,8 +13,13 @@
         android:theme="@style/Theme.AndroidComponents"
         tools:targetApi="31">
         <!--<activity
-            android:name=".DesignSpinner"
+            android:name=".MultiSpinner"
             android:exported="false" />-->
+        <!--
+        <activity
+            android:name=".DesignSpinner"
+            android:exported="false" />
+        -->
         <!--
              <activity
             android:name=".SpinnerActivity"
@@ -28,7 +33,7 @@
             android:exported="false" />
         -->
         <activity
-            android:name=".DesignSpinner"
+            android:name=".MultiSpinnerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

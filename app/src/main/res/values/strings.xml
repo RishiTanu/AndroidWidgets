@@ -54,4 +54,9 @@
         <item>Climbing</item>
     </string-array>
 
+    <string-array name="airspeed_units">
+        <item>Knots</item>
+        <item>MPH</item>
+    </string-array>
+
 </resources>

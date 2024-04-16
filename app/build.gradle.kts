@@ -27,8 +27,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -56,6 +56,15 @@ dependencies {
     implementation ("androidx.viewpager2:viewpager2:1.0.0")
     implementation ("com.hbb20:ccp:2.5.3")
     implementation ("com.googlecode.libphonenumber:libphonenumber:8.12.48")
-    implementation ("com.github.skydoves:powerspinner:1.2.7")
-    implementation ("com.github.AnuraganuPunalur:Multi-Selection-Spinner-Android:1.0")
+   // implementation ("com.github.skydoves:powerspinner:1.2.7")
+
+  //  implementation ("com.github.AnuraganuPunalur:Multi-Selection-Spinner-Android:1.0")
+
+   // implementation ("com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1")
+   // implementation ("com.github.zeeshan5422:Material-MultiSelection-Spinner:0.0.1")
+    implementation ("com.github.Liocoder24x7:Advanced-Spinner:v1.0")
+    implementation ("com.github.pratikbutani:MultiSelectSpinner:1.0.1")
+    //implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+
+
 }

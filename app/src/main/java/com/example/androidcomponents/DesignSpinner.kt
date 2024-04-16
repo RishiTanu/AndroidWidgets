@@ -12,28 +12,14 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
-import com.anurag.multiselectionspinner.MultiSelectionSpinnerDialog
-import com.anurag.multiselectionspinner.MultiSpinner
 
-class DesignSpinner : AppCompatActivity() , MultiSelectionSpinnerDialog.OnMultiSpinnerSelectionListener {
+
+class DesignSpinner : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_design_spinner)
-
-        val spinnerDrop = findViewById<Spinner>(R.id.spinnerDrop)
-        val adapterDrop = CustomSpinnerAdapter(this, R.layout.spinner_radio_item, listOf("Item 1", "Item 2", "Item 3"))
-        spinnerDrop.adapter = adapterDrop
-
-        spinnerDrop.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                adapterDrop.onItemSelected(position) // Update the adapter with the new selection
-              //  parent.dismissDropDown() // Dismiss the dropdown when an item is selected
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>) {
-                // Another selection handling here
-            }
-        }
+        spinnerItem()
+        radioSpinner()
 
 
 
@@ -69,7 +55,7 @@ class DesignSpinner : AppCompatActivity() , MultiSelectionSpinnerDialog.OnMultiS
         }
 
 
-        val multiSpinner: MultiSpinner = findViewById(R.id.spinnerMultiSpinner)
+        /*val multiSpinner: MultiSpinner = findViewById(R.id.spinnerMultiSpinner)
 
         // List for spinner content
         val contentList = arrayListOf("Option 1", "Option 2", "Option 3", "Option 4", "Option 5")
@@ -78,15 +64,51 @@ class DesignSpinner : AppCompatActivity() , MultiSelectionSpinnerDialog.OnMultiS
         multiSpinner.setAdapterWithOutImage(this, contentList, this)
 
         // Further spinner configuration
-        multiSpinner.initMultiSpinner(this, multiSpinner)
+        multiSpinner.initMultiSpinner(this, multiSpinner)*/
 
     }
 
-    override fun OnMultiSpinnerItemSelected(chosenItems: MutableList<String>?) {
+   /* override fun OnMultiSpinnerItemSelected(chosenItems: MutableList<String>?) {
         Log.d("TAG", "OnMultiSpinnerItemSelected: ${chosenItems.toString()}")
+    }*/
+
+
+    private fun spinnerItem(){
+
+        val spinner: Spinner = findViewById(R.id.spinnerAirspeedUnits)
+        spinner.background = ContextCompat.getDrawable(this, R.drawable.spinner_bg) // Set custom background
+
+// Initialize an ArrayAdapter with the custom spinner item layout
+        val adapter = ArrayAdapter.createFromResource(
+            this,
+            R.array.airspeed_units,
+            R.layout.spinner_item
+        )
+// Specify the custom dropdown layout
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item2)
+
+// Apply the adapter to the spinner
+        spinner.adapter = adapter
     }
 
+    private fun radioSpinner() {
+        val spinnerDrop: Spinner = findViewById(R.id.spinnerDrop)
+        val items = listOf("Item 1", "Item 2", "Item 3")
+        val adapterDrop = CustomSpinnerAdapter(this, items)
+        spinnerDrop.adapter = adapterDrop
 
+        // Set the initial selection and the dropdown item click behavior
+        spinnerDrop.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+                // Set the spinner selection to the chosen item
+                spinnerDrop.setSelection(position)
+                // Notify the adapter about the new selection
+                adapterDrop.onItemSelected(position)
+            }
 
-
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // If required, handle the case where no dropdown item is selected
+            }
+        }
+    }
 }
