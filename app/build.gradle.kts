@@ -64,7 +64,10 @@ dependencies {
    // implementation ("com.github.zeeshan5422:Material-MultiSelection-Spinner:0.0.1")
     implementation ("com.github.Liocoder24x7:Advanced-Spinner:v1.0")
     implementation ("com.github.pratikbutani:MultiSelectSpinner:1.0.1")
-    //implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
-
+   // implementation ("androidx.recyclerview:recyclerview:1.3.2")
+   // implementation ("com.facebook.shimmer:shimmer:0.5.0")
+  /*  //implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'*/
 
 }

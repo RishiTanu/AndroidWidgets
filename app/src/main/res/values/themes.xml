@@ -32,4 +32,20 @@
     <color name="blue">#0000FF</color>
     <color name="green">#00FF00</color>
 
+
+    <!-- Style for the TabLayout -->
+    <style name="MyCustomTabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabPaddingTop">8dp</item>
+        <item name="tabPaddingBottom">8dp</item>
+    </style>
+
+    <!-- Style for the Tab Text Appearance -->
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
 </resources>

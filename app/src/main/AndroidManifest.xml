@@ -12,9 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidComponents"
         tools:targetApi="31">
-        <!--<activity
-            android:name=".MultiSpinner"
+    <!--    <activity
+            android:name=".ShimmerActivity"
             android:exported="false" />-->
+        <!--
+        <activity
+            android:name=".MultiSpinner"
+            android:exported="false" />
+        -->
         <!--
         <activity
             android:name=".DesignSpinner"
@@ -33,7 +38,7 @@
             android:exported="false" />
         -->
         <activity
-            android:name=".MultiSpinnerActivity"
+            android:name=".ShimmerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

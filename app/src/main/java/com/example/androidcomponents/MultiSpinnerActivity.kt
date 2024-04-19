@@ -1,20 +1,30 @@
 package com.example.androidcomponents
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputLayout
+import androidx.appcompat.content.res.AppCompatResources
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import com.google.android.material.textfield.TextInputEditText
 
 class MultiSpinnerActivity : AppCompatActivity() {
-    private lateinit var autoCompleteTextView: AutoCompleteTextView
+   // private lateinit var autoCompleteTextView: AutoCompleteTextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_multi_spinner)
 
-        autoCompleteTextView = findViewById(R.id.autocompleteAirport)
+        val units = listOf("knots", "mph")
+        val adapter = ArrayAdapter(this, R.layout.dropdown_item, units)
+        val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
+
+        autoCompleteTextView.setAdapter(adapter)
+        autoCompleteTextView.setOnItemClickListener { _, _, position, _ ->
+            autoCompleteTextView.setText(units[position])
+        }
+
+       /* autoCompleteTextView = findViewById(R.id.autocompleteAirport)
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line)
         autoCompleteTextView.setAdapter(adapter)
 
@@ -35,7 +45,7 @@ class MultiSpinnerActivity : AppCompatActivity() {
                 }
             }
         })
-
+*/
         // Assume loadDataFromAPI is a method you'll define to perform the API request and process the response:
         //private fun loadDataFromAPI(query: String) {
             // Your API call logic to load
